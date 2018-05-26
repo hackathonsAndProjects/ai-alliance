@@ -12,11 +12,12 @@ https://www.apachefriends.org/index.html
 Open XAMPP control panel and start Apache and MySQL modules. 
 Go to http://localhost/dashboard/ If you see the XAMPP header, then congrats, you're in! Note: MySQL and all the pretty web package will run as long as you keep these settings on XAMPP control panel. To turn off these features, go back to XAMPP control panel and click "Stop" where applicable (MySQL and Apache), and the server will stop running. 
 </br>
+</br>
 To access the Database (MySQL), click on phpMyAdmin. Click on Database. Create a new database and we will name it ai-alliance (note: you can choose whatever name you want, it won't matter).
 Once the database has been initialized, go to MySQL and you will be able to enter SQL commands, such as create table, insert data, etc. to populate your local database (data coming soon :) ). 
 To start off, you need to create a table, which will store our data. For example, run the command 
-</br> create table brailledict(Picture varchar(255), Label varchar(255)); 
-</br>
+</br> </br>create table brailledict(Picture varchar(255), Label varchar(255)); 
+</br> </br>
 will create a table named brailledict with columns Picture and Label each taking a string up to length 255. 
 </br> To learn more about SQL: 
 https://www.w3schools.com/sql/default.asp
