@@ -28,3 +28,6 @@ https://www.w3schools.com/sql/default.asp
 Find the xampp folder on your computer (usually under C disk). Go to C:/xampp/htdocs.Inside htdocs, create a new folder named ai-alliance. Inside this folder, put whatever files you think pertain to the project, or just a file that you want to test. For now, we are going to place the dummy file named index.html inside this folder. (as you see in the repo)  
 </br>
 </br>To make sure that you created the folder in the right place, go to localhost/ai-alliance. If you get an error message, you didn't do it right :(. Else you should see a page that says "Hello world!"  
+
+</br>
+Once you've passed the "Hello world" test, you are good to go. Simply put everything under htdocs/ai-alliance into your local ai-alliance folder and ta-da! 
