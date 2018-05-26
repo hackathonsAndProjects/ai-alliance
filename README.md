@@ -16,4 +16,4 @@ To access the Database (MySQL), click on phpMyAdmin. Click on MySQL and you will
 
 ## Putting the files in the right place
 </br>
-Find the xampp folder on your computer (usually under C disk). Go to C:/xampp/htdocs.Inside htdocs, create a new folder named ai-alliance. Inside this folder, put whatever files you think pertain to the project, or just a file that you want to test. Note: you can also create more subfolders if you like. To make sure that you created the folder in the right place, go to localhost/ai-alliance. If you get an error message, something went wrong. 
+Find the xampp folder on your computer (usually under C disk). Go to C:/xampp/htdocs.Inside htdocs, create a new folder named ai-alliance. Inside this folder, put whatever files you think pertain to the project, or just a file that you want to test. Note: you can also create more subfolders if you like. To make sure that you created the folder in the right place, go to localhost/ai-alliance. If you get an error message, you didn't do it right :(. Else congrats :). 
