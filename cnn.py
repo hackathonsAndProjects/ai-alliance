@@ -73,15 +73,6 @@ len(d)
 x = list(train_loader)[0][0]
 x.shape
 
-"""### Use GPU instead of CPU 
-
-Use the .cuba() function from PyTorch to enable GPU.Using GPU instead of CPU will help make training the model much faster.
-"""
-
-use_gpu = torch.cuda.is_available()
-
-print("GPU Available: {}".format(use_gpu))
-
 """### Generate the Targets
 Create a dictionary that contains the one-hot encoding vector for each image in the Braille alphabet.
 """
@@ -157,20 +148,13 @@ class CNN(nn.Module):
 # convolutional neural network model
 model = CNN()
 
-# if using GPU
-if use_gpu:
-  # switch model to GPU
-  model.cuda()
-
 # print summary of the neural network model to check if everything is fine. 
 print(model)
 print("# parameter: ", sum([param.nelement() for param in model.parameters()]))
 
-use_gpu
 
 """### Print out the new shape of the dataset"""
 
-x = x.cuda()
 out = model(x)
 
 # shape of dataset before model
@@ -232,11 +216,6 @@ for epoch in range(num_epochs):
     # Iterate over data.
     for i, (images, labels) in enumerate(train_loader):  
       
-        # if GPU is available 
-        if use_gpu:
-          # switch tensor type to GPU
-          images = images.cuda()
-          labels = labels.cuda()
         # Zero the gradient buffer
         # resets the gradient after each epoch so that the gradients don't add up
         optimizer.zero_grad()  
@@ -267,12 +246,6 @@ for epoch in range(num_epochs):
 
     # Iterate over data.
     for images, labels in test_loader:  
-       
-       # if GPU is available 
-       if use_gpu:
-          # switch tensor type to GPU
-          images = images.cuda()
-          labels = labels.cuda()
           
        # Forward
        outputs = model(images)
@@ -287,6 +260,3 @@ for epoch in range(num_epochs):
 tf = time.time()
 print()
 print("time: {} s" .format(tf-t0))
-
-x = list(train_loader)[0][0]
-x.shape
